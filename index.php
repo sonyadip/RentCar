@@ -60,7 +60,7 @@
     <div class="col pb-3">
         <div class="card" style="width:20.9rem">
         <a href="img/mobil/<?=$row['gambar']?>" class="fancybox">
-				<img class="card-img-top" src="img/mobil/<?=$row['gambar']?>" style="height:200px; width:333px" alt="Card image cap <?=$row['judul']?>"/> <!--style="height:184px; width:306px" -->
+				<img class="card-img-top" src="img/mobil/<?=$row['gambar']?>" style="height:200px; width:333px"> <!--style="height:184px; width:306px" -->
 			</a>
             <div class="card-body">
             <h3><?=$row["merk"]?> <?=$row["nama_mobil"]?></h3>

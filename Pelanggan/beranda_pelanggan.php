@@ -74,7 +74,7 @@
     <div class="col pb-3">
         <div class="card" style="width:20.9rem">
         <a href="../img/mobil/<?=$row['gambar']?>" class="fancybox">
-				<img class="card-img-top" src="../img/mobil/<?=$row['gambar']?>" style="height:200px; width:333px" alt="Card image cap <?=$row['judul']?>"/> <!--style="height:184px; width:306px" -->
+				<img class="card-img-top" src="../img/mobil/<?=$row['gambar']?>" style="height:200px; width:333px"> <!--style="height:184px; width:306px" -->
 			</a>
             <div class="card-body">
             <h3><?=$row["merk"]?> <?=$row["nama_mobil"]?></h3>
@@ -126,35 +126,3 @@ echo "<p>Total Mobil : <b>$jmldata</b> Unit</p>";
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
     </html>
-<!--
-    include '../config.php';
-$no = 1;
-
-// Langkah 1. Tentukan batas, cek halaman & posisi data
-$batas = 6;
-$halaman = @$_GET['halaman'];
-if(empty($halaman)){
-    $posisi = 0;
-    $halaman = 1;
-}
-else {
-    $posisi = ($halaman-1) * $batas;
-}
-
-//Langkah 2. Hitung total data dan halaman serta link 1,2,3
-$query2		= mysqli_query($connection, "select * from mobil");
-$jmldata	= mysqli_num_rows($query2);
-$jmlhalaman	= ceil($jmldata/$batas);
-
-echo "<br> <center> Halaman : </center>";
-
-for($i=1; $i<=$jmlhalaman; $i++)
-if($i != $halaman){
-    echo " <a href=\"beranda_pelanggan.php?halaman=$i\">$i</a> | ";
-}
-else{
-    echo "<center> <b>$i</b> | </center>";
-}
-
-echo "<center><p>Total Mobil : <b>$jmldata</b> Unit</p><center>";
-?>
